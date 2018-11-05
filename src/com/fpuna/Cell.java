@@ -4,6 +4,7 @@ public class Cell {
 
     Integer [] features;
     Integer accuracy;
+    Boolean empty;
 
     public Cell(Integer numFeatures){
         features = new Integer[numFeatures];
@@ -43,5 +44,23 @@ public class Cell {
      */
     public void setAccuracy(Integer accuracy) {
         this.accuracy = accuracy;
+    }
+
+    /**
+     * Gets empty
+     *
+     * @return value of empty
+     */
+    public Boolean isEmpty() {
+        return empty;
+    }
+
+    /**
+     * Set empty
+     *
+     * @param empty
+     */
+    public void setEmpty(Boolean empty) {
+        this.empty = empty;
     }
 }
