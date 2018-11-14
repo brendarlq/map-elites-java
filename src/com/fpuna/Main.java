@@ -8,7 +8,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         //TODO: Como determinar el número de iteraciones?
-        Integer iteraciones = 5000;
+        Integer iteraciones = 50000;
 
         //Pedimos los datos que necesitamos.
         System.out.print("Ingresa la cantidad de features del dataset: ");
@@ -21,14 +21,23 @@ public class Main {
 
         System.out.print("\nNúmero de bits fijos: "+ cantBitsFijos.intValue());
 
-        //Creamos el mapa
-        Mapa map = new Mapa(numCell, numFeatures);
+        //Creamos las celdas
+        Mapa map = new Mapa(numCell, numFeatures, cantBitsFijos.intValue());
+
         //Cargamos los bits fijos en las celdas
-        map.loadCell(cantBitsFijos.intValue());
-        //Imprimimos el mapa
+        map.loadCell();
+
+        //Imprimimos el mapa inicialmente
+        System.out.print("\n\nMapa Incial:");
         map.printMap();
 
+
         //Ejecutamos el algoritmo map-elites
-        MapElites.execute(map,iteraciones);
+        MapElites mapElites = new MapElites();
+        mapElites.execute(map,iteraciones);
+
+        //Imprimimos el mapa final
+        System.out.print("\n\nMapa Final:");
+        map.printMap();
     }
 }
