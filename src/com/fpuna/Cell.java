@@ -1,5 +1,8 @@
 package com.fpuna;
 
+/**
+ * A Cell with feature vector
+ */
 public class Cell {
 
     Integer [] features;

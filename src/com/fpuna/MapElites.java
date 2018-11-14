@@ -149,7 +149,6 @@ public class MapElites {
     }
 
     //TODO: Como realizar la mutación?
-
     /**
      * Realiza la mutación del la celda seleccionada.
      *

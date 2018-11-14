@@ -1,5 +1,8 @@
 package com.fpuna;
 
+/**
+ * A group of cells.
+ */
 public class Mapa {
 
     Cell [] cells;
