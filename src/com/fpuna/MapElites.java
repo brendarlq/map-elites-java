@@ -156,7 +156,10 @@ public class MapElites {
      * @return
      */
     private Integer[] variationRandom(Cell selectedCell) {
-        Integer[] features = selectedCell.getFeatures();
+        Integer[] features = new Integer[selectedCell.getFeatures().length];
+        for (int i=0; i <selectedCell.getFeatures().length; i++ ){
+            features[i] = selectedCell.getFeatures()[i];
+        }
         Integer featureId = random.nextInt(mapa.getNumberFeatures());
         if (features[featureId].equals(0)) {
             features[featureId] = 1;

@@ -8,7 +8,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         //TODO: Como determinar el número de iteraciones?
-        Integer iteraciones = 50000;
+        Integer iteraciones = 5000000;
 
         //Pedimos los datos que necesitamos.
         System.out.print("Ingresa la cantidad de features del dataset: ");
